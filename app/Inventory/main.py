@@ -5,6 +5,8 @@ from bedrock_agentcore.runtime import BedrockAgentCoreApp
 from model.load import load_model
 from mcp_client.client import get_streamable_http_mcp_client
 
+from tools.kb_tool import search_inventory_knowledge
+
 app = BedrockAgentCoreApp()
 log = app.logger
 
@@ -12,12 +14,17 @@ log = app.logger
 mcp_clients = [get_streamable_http_mcp_client()]
 
 DEFAULT_SYSTEM_PROMPT = """
-You are a helpful assistant. Use tools when appropriate.
+You are an intelligent inventory assistant.
+
+Use the knowledge base tool whenever inventory,
+products, stock rules, SOPs, or documentation
+questions are asked.
 """
 
 
 # Define a collection of tools used by the model
 tools = []
+tools.append(search_inventory_knowledge)
 
 # Define a simple function tool
 @tool
