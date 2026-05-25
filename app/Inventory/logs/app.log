@@ -1,0 +1,96 @@
+2026-05-25 11:47:40,295 | INFO | InventoryAI | Invoking Orchestrator Agent...
+2026-05-25 11:47:52,631 | INFO | InventoryAI | Invoking Orchestrator Agent...
+2026-05-25 11:48:21,662 | INFO | InventoryAI | Invoking Orchestrator Agent...
+2026-05-25 11:48:22,236 | INFO | InventoryAI | Executing orchestrator.route_query tool...
+2026-05-25 11:48:22,236 | INFO | InventoryAI | Classifying intent with Bedrock...
+2026-05-25 11:48:23,101 | INFO | InventoryAI | Received response from Bedrock: {'ResponseMetadata': {'RequestId': 'b725c89f-fd67-4dea-ba75-ccecdc4c07cc', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Mon, 25 May 2026 06:18:23 GMT', 'content-type': 'application/json', 'content-length': '220', 'connection': 'keep-alive', 'x-amzn-requestid': 'b725c89f-fd67-4dea-ba75-ccecdc4c07cc', 'x-amzn-bedrock-invocation-latency': '250', 'x-amzn-bedrock-cache-write-input-token-count': '0', 'x-amzn-bedrock-cache-read-input-token-count': '0', 'x-amzn-bedrock-output-token-count': '2', 'x-amzn-bedrock-input-token-count': '69'}, 'RetryAttempts': 0}, 'contentType': 'application/json', 'body': <botocore.response.StreamingBody object at 0x1115af6d0>}
+2026-05-25 11:48:23,101 | INFO | InventoryAI | Parsed response body: {'output': {'message': {'content': [{'text': 'inventory'}], 'role': 'assistant'}}, 'stopReason': 'end_turn', 'usage': {'inputTokens': 69, 'outputTokens': 2, 'totalTokens': 71, 'cacheReadInputTokenCount': 0, 'cacheWriteInputTokenCount': 0}}
+2026-05-25 11:48:23,101 | INFO | InventoryAI | Extracted intent: inventory
+2026-05-25 11:48:23,102 | INFO | InventoryAI | 
+[Orchestrator Decision]: inventory
+2026-05-25 11:48:23,102 | INFO | InventoryAI | Executing inventory_agent.handle_query tool...
+2026-05-25 11:48:23,939 | INFO | InventoryAI | Received response from Bedrock: {'ResponseMetadata': {'RequestId': 'a6b42f6e-a3a0-4688-9a93-38c0f5179ef2', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Mon, 25 May 2026 06:18:23 GMT', 'content-type': 'application/json', 'content-length': '275', 'connection': 'keep-alive', 'x-amzn-requestid': 'a6b42f6e-a3a0-4688-9a93-38c0f5179ef2', 'x-amzn-bedrock-invocation-latency': '226', 'x-amzn-bedrock-cache-write-input-token-count': '0', 'x-amzn-bedrock-cache-read-input-token-count': '0', 'x-amzn-bedrock-output-token-count': '17', 'x-amzn-bedrock-input-token-count': '111'}, 'RetryAttempts': 0}, 'contentType': 'application/json', 'body': <botocore.response.StreamingBody object at 0x1115af880>}
+2026-05-25 11:48:23,939 | INFO | InventoryAI | Parsed response body: {'output': {'message': {'content': [{'text': '{\n    "tool": "list_products",\n    "arguments": {}\n}'}], 'role': 'assistant'}}, 'stopReason': 'end_turn', 'usage': {'inputTokens': 111, 'outputTokens': 17, 'totalTokens': 128, 'cacheReadInputTokenCount': 0, 'cacheWriteInputTokenCount': 0}}
+2026-05-25 11:48:23,939 | INFO | InventoryAI | 
+[RAW TOOL OUTPUT]:
+2026-05-25 11:48:23,940 | INFO | InventoryAI | {
+    "tool": "list_products",
+    "arguments": {}
+}
+2026-05-25 11:48:23,940 | INFO | InventoryAI | 
+[LLM Tool Decision]
+2026-05-25 11:48:23,940 | INFO | InventoryAI | {'tool': 'list_products', 'arguments': {}}
+2026-05-25 11:49:02,506 | INFO | InventoryAI | Invoking Orchestrator Agent...
+2026-05-25 11:49:16,304 | INFO | InventoryAI | Invoking Orchestrator Agent...
+2026-05-25 11:49:17,027 | INFO | InventoryAI | Executing orchestrator.route_query tool...
+2026-05-25 11:49:17,027 | INFO | InventoryAI | Classifying intent with Bedrock...
+2026-05-25 11:49:17,400 | INFO | InventoryAI | Received response from Bedrock: {'ResponseMetadata': {'RequestId': 'e1aab413-fd29-46f4-9155-326124781083', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Mon, 25 May 2026 06:19:17 GMT', 'content-type': 'application/json', 'content-length': '222', 'connection': 'keep-alive', 'x-amzn-requestid': 'e1aab413-fd29-46f4-9155-326124781083', 'x-amzn-bedrock-invocation-latency': '170', 'x-amzn-bedrock-cache-write-input-token-count': '0', 'x-amzn-bedrock-cache-read-input-token-count': '0', 'x-amzn-bedrock-output-token-count': '2', 'x-amzn-bedrock-input-token-count': '72'}, 'RetryAttempts': 0}, 'contentType': 'application/json', 'body': <botocore.response.StreamingBody object at 0x1115af820>}
+2026-05-25 11:49:17,400 | INFO | InventoryAI | Parsed response body: {'output': {'message': {'content': [{'text': 'procurement'}], 'role': 'assistant'}}, 'stopReason': 'end_turn', 'usage': {'inputTokens': 72, 'outputTokens': 2, 'totalTokens': 74, 'cacheReadInputTokenCount': 0, 'cacheWriteInputTokenCount': 0}}
+2026-05-25 11:49:17,400 | INFO | InventoryAI | Extracted intent: procurement
+2026-05-25 11:49:17,400 | INFO | InventoryAI | 
+[Orchestrator Decision]: procurement
+2026-05-25 11:49:17,400 | INFO | InventoryAI | Executing procurement_agent.handle_query tool...
+2026-05-25 11:49:18,276 | INFO | InventoryAI | Received response from Bedrock: {'ResponseMetadata': {'RequestId': 'a16b2202-fb96-4544-862b-ac2e207127ee', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Mon, 25 May 2026 06:19:18 GMT', 'content-type': 'application/json', 'content-length': '293', 'connection': 'keep-alive', 'x-amzn-requestid': 'a16b2202-fb96-4544-862b-ac2e207127ee', 'x-amzn-bedrock-invocation-latency': '261', 'x-amzn-bedrock-cache-write-input-token-count': '0', 'x-amzn-bedrock-cache-read-input-token-count': '0', 'x-amzn-bedrock-output-token-count': '20', 'x-amzn-bedrock-input-token-count': '140'}, 'RetryAttempts': 0}, 'contentType': 'application/json', 'body': <botocore.response.StreamingBody object at 0x11165c190>}
+2026-05-25 11:49:18,276 | INFO | InventoryAI | Parsed response body: {'output': {'message': {'content': [{'text': '{\n    "tool": "get_top_selling_products",\n    "arguments": {\n       '}], 'role': 'assistant'}}, 'stopReason': 'max_tokens', 'usage': {'inputTokens': 140, 'outputTokens': 20, 'totalTokens': 160, 'cacheReadInputTokenCount': 0, 'cacheWriteInputTokenCount': 0}}
+2026-05-25 11:49:18,276 | INFO | InventoryAI | 
+[RAW TOOL OUTPUT]:
+2026-05-25 11:49:18,276 | INFO | InventoryAI | {
+    "tool": "get_top_selling_products",
+    "arguments": {
+       
+2026-05-25 11:49:18,994 | INFO | InventoryAI | Executing orchestrator.route_query tool...
+2026-05-25 11:49:18,994 | INFO | InventoryAI | Classifying intent with Bedrock...
+2026-05-25 11:49:19,370 | INFO | InventoryAI | Received response from Bedrock: {'ResponseMetadata': {'RequestId': '0ff19320-2ff4-4765-be5e-50038cca23cf', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Mon, 25 May 2026 06:19:19 GMT', 'content-type': 'application/json', 'content-length': '222', 'connection': 'keep-alive', 'x-amzn-requestid': '0ff19320-2ff4-4765-be5e-50038cca23cf', 'x-amzn-bedrock-invocation-latency': '193', 'x-amzn-bedrock-cache-write-input-token-count': '0', 'x-amzn-bedrock-cache-read-input-token-count': '0', 'x-amzn-bedrock-output-token-count': '2', 'x-amzn-bedrock-input-token-count': '72'}, 'RetryAttempts': 0}, 'contentType': 'application/json', 'body': <botocore.response.StreamingBody object at 0x11165c070>}
+2026-05-25 11:49:19,370 | INFO | InventoryAI | Parsed response body: {'output': {'message': {'content': [{'text': 'procurement'}], 'role': 'assistant'}}, 'stopReason': 'end_turn', 'usage': {'inputTokens': 72, 'outputTokens': 2, 'totalTokens': 74, 'cacheReadInputTokenCount': 0, 'cacheWriteInputTokenCount': 0}}
+2026-05-25 11:49:19,370 | INFO | InventoryAI | Extracted intent: procurement
+2026-05-25 11:49:19,370 | INFO | InventoryAI | 
+[Orchestrator Decision]: procurement
+2026-05-25 11:49:19,370 | INFO | InventoryAI | Executing procurement_agent.handle_query tool...
+2026-05-25 11:49:19,815 | INFO | InventoryAI | Received response from Bedrock: {'ResponseMetadata': {'RequestId': '2d81a4ed-272c-4342-b592-9863af25f739', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Mon, 25 May 2026 06:19:19 GMT', 'content-type': 'application/json', 'content-length': '293', 'connection': 'keep-alive', 'x-amzn-requestid': '2d81a4ed-272c-4342-b592-9863af25f739', 'x-amzn-bedrock-invocation-latency': '225', 'x-amzn-bedrock-cache-write-input-token-count': '0', 'x-amzn-bedrock-cache-read-input-token-count': '0', 'x-amzn-bedrock-output-token-count': '20', 'x-amzn-bedrock-input-token-count': '140'}, 'RetryAttempts': 0}, 'contentType': 'application/json', 'body': <botocore.response.StreamingBody object at 0x11165c520>}
+2026-05-25 11:49:19,815 | INFO | InventoryAI | Parsed response body: {'output': {'message': {'content': [{'text': '{\n    "tool": "get_top_selling_products",\n    "arguments": {\n       '}], 'role': 'assistant'}}, 'stopReason': 'max_tokens', 'usage': {'inputTokens': 140, 'outputTokens': 20, 'totalTokens': 160, 'cacheReadInputTokenCount': 0, 'cacheWriteInputTokenCount': 0}}
+2026-05-25 11:49:19,815 | INFO | InventoryAI | 
+[RAW TOOL OUTPUT]:
+2026-05-25 11:49:19,815 | INFO | InventoryAI | {
+    "tool": "get_top_selling_products",
+    "arguments": {
+       
+2026-05-25 11:49:21,350 | INFO | InventoryAI | Executing orchestrator.route_query tool...
+2026-05-25 11:49:21,350 | INFO | InventoryAI | Classifying intent with Bedrock...
+2026-05-25 11:49:21,862 | INFO | InventoryAI | Received response from Bedrock: {'ResponseMetadata': {'RequestId': '14f80fd8-14e6-4387-ace5-16b1725edced', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Mon, 25 May 2026 06:19:21 GMT', 'content-type': 'application/json', 'content-length': '222', 'connection': 'keep-alive', 'x-amzn-requestid': '14f80fd8-14e6-4387-ace5-16b1725edced', 'x-amzn-bedrock-invocation-latency': '194', 'x-amzn-bedrock-cache-write-input-token-count': '0', 'x-amzn-bedrock-cache-read-input-token-count': '0', 'x-amzn-bedrock-output-token-count': '2', 'x-amzn-bedrock-input-token-count': '71'}, 'RetryAttempts': 0}, 'contentType': 'application/json', 'body': <botocore.response.StreamingBody object at 0x11165c7f0>}
+2026-05-25 11:49:21,862 | INFO | InventoryAI | Parsed response body: {'output': {'message': {'content': [{'text': 'procurement'}], 'role': 'assistant'}}, 'stopReason': 'end_turn', 'usage': {'inputTokens': 71, 'outputTokens': 2, 'totalTokens': 73, 'cacheReadInputTokenCount': 0, 'cacheWriteInputTokenCount': 0}}
+2026-05-25 11:49:21,862 | INFO | InventoryAI | Extracted intent: procurement
+2026-05-25 11:49:21,862 | INFO | InventoryAI | 
+[Orchestrator Decision]: procurement
+2026-05-25 11:49:21,862 | INFO | InventoryAI | Executing procurement_agent.handle_query tool...
+2026-05-25 11:49:22,267 | INFO | InventoryAI | Received response from Bedrock: {'ResponseMetadata': {'RequestId': '64c08978-a48d-4887-bff7-cae3eb893c75', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Mon, 25 May 2026 06:19:22 GMT', 'content-type': 'application/json', 'content-length': '293', 'connection': 'keep-alive', 'x-amzn-requestid': '64c08978-a48d-4887-bff7-cae3eb893c75', 'x-amzn-bedrock-invocation-latency': '222', 'x-amzn-bedrock-cache-write-input-token-count': '0', 'x-amzn-bedrock-cache-read-input-token-count': '0', 'x-amzn-bedrock-output-token-count': '20', 'x-amzn-bedrock-input-token-count': '139'}, 'RetryAttempts': 0}, 'contentType': 'application/json', 'body': <botocore.response.StreamingBody object at 0x11165c8e0>}
+2026-05-25 11:49:22,267 | INFO | InventoryAI | Parsed response body: {'output': {'message': {'content': [{'text': '{\n    "tool": "get_top_selling_products",\n    "arguments": {\n       '}], 'role': 'assistant'}}, 'stopReason': 'max_tokens', 'usage': {'inputTokens': 139, 'outputTokens': 20, 'totalTokens': 159, 'cacheReadInputTokenCount': 0, 'cacheWriteInputTokenCount': 0}}
+2026-05-25 11:49:22,267 | INFO | InventoryAI | 
+[RAW TOOL OUTPUT]:
+2026-05-25 11:49:22,267 | INFO | InventoryAI | {
+    "tool": "get_top_selling_products",
+    "arguments": {
+       
+2026-05-25 11:49:57,547 | INFO | InventoryAI | Invoking Orchestrator Agent...
+2026-05-25 11:49:58,234 | INFO | InventoryAI | Executing orchestrator.route_query tool...
+2026-05-25 11:49:58,234 | INFO | InventoryAI | Classifying intent with Bedrock...
+2026-05-25 11:49:58,727 | INFO | InventoryAI | Received response from Bedrock: {'ResponseMetadata': {'RequestId': '1f807eb0-c47c-4872-95b0-b353eb4d9b51', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Mon, 25 May 2026 06:19:58 GMT', 'content-type': 'application/json', 'content-length': '220', 'connection': 'keep-alive', 'x-amzn-requestid': '1f807eb0-c47c-4872-95b0-b353eb4d9b51', 'x-amzn-bedrock-invocation-latency': '216', 'x-amzn-bedrock-cache-write-input-token-count': '0', 'x-amzn-bedrock-cache-read-input-token-count': '0', 'x-amzn-bedrock-output-token-count': '2', 'x-amzn-bedrock-input-token-count': '69'}, 'RetryAttempts': 0}, 'contentType': 'application/json', 'body': <botocore.response.StreamingBody object at 0x11165c4c0>}
+2026-05-25 11:49:58,727 | INFO | InventoryAI | Parsed response body: {'output': {'message': {'content': [{'text': 'inventory'}], 'role': 'assistant'}}, 'stopReason': 'end_turn', 'usage': {'inputTokens': 69, 'outputTokens': 2, 'totalTokens': 71, 'cacheReadInputTokenCount': 0, 'cacheWriteInputTokenCount': 0}}
+2026-05-25 11:49:58,727 | INFO | InventoryAI | Extracted intent: inventory
+2026-05-25 11:49:58,728 | INFO | InventoryAI | 
+[Orchestrator Decision]: inventory
+2026-05-25 11:49:58,728 | INFO | InventoryAI | Executing inventory_agent.handle_query tool...
+2026-05-25 11:49:59,238 | INFO | InventoryAI | Received response from Bedrock: {'ResponseMetadata': {'RequestId': '14eb9486-9b87-45b0-aa73-a6012bfe8387', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Mon, 25 May 2026 06:19:59 GMT', 'content-type': 'application/json', 'content-length': '275', 'connection': 'keep-alive', 'x-amzn-requestid': '14eb9486-9b87-45b0-aa73-a6012bfe8387', 'x-amzn-bedrock-invocation-latency': '205', 'x-amzn-bedrock-cache-write-input-token-count': '0', 'x-amzn-bedrock-cache-read-input-token-count': '0', 'x-amzn-bedrock-output-token-count': '17', 'x-amzn-bedrock-input-token-count': '111'}, 'RetryAttempts': 0}, 'contentType': 'application/json', 'body': <botocore.response.StreamingBody object at 0x11165c190>}
+2026-05-25 11:49:59,239 | INFO | InventoryAI | Parsed response body: {'output': {'message': {'content': [{'text': '{\n    "tool": "list_products",\n    "arguments": {}\n}'}], 'role': 'assistant'}}, 'stopReason': 'end_turn', 'usage': {'inputTokens': 111, 'outputTokens': 17, 'totalTokens': 128, 'cacheReadInputTokenCount': 0, 'cacheWriteInputTokenCount': 0}}
+2026-05-25 11:49:59,239 | INFO | InventoryAI | 
+[RAW TOOL OUTPUT]:
+2026-05-25 11:49:59,240 | INFO | InventoryAI | {
+    "tool": "list_products",
+    "arguments": {}
+}
+2026-05-25 11:49:59,240 | INFO | InventoryAI | 
+[LLM Tool Decision]
+2026-05-25 11:49:59,240 | INFO | InventoryAI | {'tool': 'list_products', 'arguments': {}}
+2026-05-25 11:51:14,753 | INFO | InventoryAI | Invoking Orchestrator Agent...
+2026-05-25 11:51:40,204 | INFO | InventoryAI | Invoking Orchestrator Agent...
+2026-05-25 11:52:33,187 | INFO | InventoryAI | Invoking Orchestrator Agent...
+2026-05-25 11:53:14,848 | INFO | InventoryAI | Invoking Orchestrator Agent...

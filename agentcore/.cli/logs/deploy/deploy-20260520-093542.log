@@ -1,0 +1,18 @@
+================================================================================
+AGENTCORE DEPLOY LOG
+Command: deploy
+Started: 2026-05-20T04:05:42.606Z
+================================================================================
+
+
+[09:35:42] STEP: Validate project
+[09:35:44] Status: SUCCESS
+[09:35:44] Duration: 1.6s
+
+[09:35:44] STEP: Check dependencies
+[09:35:44] Node.js: 24.11.1
+[09:35:44] uv: 0.11.15
+[09:35:44] Status: SUCCESS
+[09:35:44] Duration: 73ms
+
+[09:35:44] STEP: Build CDK project

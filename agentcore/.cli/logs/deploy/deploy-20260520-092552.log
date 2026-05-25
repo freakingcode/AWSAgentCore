@@ -1,0 +1,49 @@
+================================================================================
+AGENTCORE DEPLOY LOG
+Command: deploy
+Started: 2026-05-20T03:55:52.672Z
+================================================================================
+
+
+[09:25:54] STEP: Validate project
+[09:25:56] Status: SUCCESS
+[09:25:56] Duration: 1.6s
+
+[09:25:56] STEP: Check dependencies
+[09:25:56] Node.js: 24.11.1
+[09:25:56] uv: 0.11.15
+[09:25:56] Status: SUCCESS
+[09:25:56] Duration: 147ms
+
+[09:25:56] STEP: Build CDK project
+[09:26:09] Status: SUCCESS
+[09:26:09] Duration: 13.6s
+
+[09:26:09] STEP: Synthesize CloudFormation
+[09:26:11] Error: CDK synth failed: node dist/bin/cdk.js: Subprocess exited with error 1
+
+Stack trace:
+CDK synth failed: node dist/bin/cdk.js: Subprocess exited with error 1
+
+Original stack:
+AssemblyError: node dist/bin/cdk.js: Subprocess exited with error 1
+    at AssemblyError.withCause (/Users/vaibhavsharma/.nvm/versions/node/v24.11.1/lib/node_modules/@aws/agentcore/node_modules/@aws-cdk/toolkit-lib/lib/toolkit/toolkit-error.js:98:16)
+    at ChildProcess.<anonymous> (/Users/vaibhavsharma/.nvm/versions/node/v24.11.1/lib/node_modules/@aws/agentcore/node_modules/@aws-cdk/toolkit-lib/lib/api/cloud-assembly/private/exec.js:77:59)
+    at ChildProcess.emit (node:events:508:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+
+Caused by:
+AgentCore CDK synthesis failed: Required project file not found: /Users/vaibhavsharma/Desktop/AWS/inventory-ai-system/InventoryAI/app/Inventory/pyproject.toml
+
+Stack trace:
+ExecutionError: AgentCore CDK synthesis failed: Required project file not found: /Users/vaibhavsharma/Desktop/AWS/inventory-ai-system/InventoryAI/app/Inventory/pyproject.toml
+    at ChildProcess.<anonymous> (/Users/vaibhavsharma/.nvm/versions/node/v24.11.1/lib/node_modules/@aws/agentcore/node_modules/@aws-cdk/toolkit-lib/lib/api/cloud-assembly/private/exec.js:74:29)
+    at ChildProcess.emit (node:events:508:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+[09:26:11] Status: FAILED
+[09:26:11] Duration: 1.9s
+
+================================================================================
+FAILED
+Total Duration: 19.0s
+================================================================================

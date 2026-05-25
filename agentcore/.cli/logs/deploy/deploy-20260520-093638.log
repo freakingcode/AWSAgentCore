@@ -1,0 +1,253 @@
+================================================================================
+AGENTCORE DEPLOY LOG
+Command: deploy
+Started: 2026-05-20T04:06:38.876Z
+================================================================================
+
+
+[09:36:38] STEP: Validate project
+[09:36:40] Status: SUCCESS
+[09:36:40] Duration: 1.8s
+
+[09:36:40] STEP: Check dependencies
+[09:36:40] Node.js: 24.11.1
+[09:36:40] uv: 0.11.15
+[09:36:40] Status: SUCCESS
+[09:36:40] Duration: 78ms
+
+[09:36:40] STEP: Build CDK project
+[09:36:53] Status: SUCCESS
+[09:36:53] Duration: 12.7s
+
+[09:36:53] STEP: Synthesize CloudFormation
+[09:37:00] Stacks: AgentCore-InventoryAI-default
+[09:37:00] Status: SUCCESS
+[09:37:00] Duration: 7.2s
+
+[09:37:00] STEP: Check stack status
+[09:37:02] Status: SUCCESS
+[09:37:02] Duration: 1.5s
+
+[09:37:03] STEP: Computing diff changes...
+[09:37:03] Starting Synthesis ...
+[09:37:03] --app points to a cloud assembly, so we bypass synth
+[09:37:03] ✨  Synthesis time: 0.02s
+[09:37:03] Starting Diff ...
+[09:37:03] Retrieved account ID 133375667645 from disk cache
+[09:37:03] Assuming role 'arn:aws:iam::133375667645:role/cdk-hnb659fds-lookup-role-133375667645-us-east-1'.
+[09:37:04] [SDK info] STS.AssumeRole({"RoleArn":"arn:aws:iam::133375667645:role/cdk-hnb659fds-lookup-role-133375667645-us-east-1","RoleSessionName":"aws-cdk-vaibhavsharma"}) -> OK
+[09:37:06] [SDK info] SSM.GetParameter({"Name":"/cdk-bootstrap/hnb659fds/version","WithDecryption":true}) -> OK
+[09:37:07] [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:37:08] [SDK info] CloudFormation.GetTemplate({"StackName":"AgentCore-InventoryAI-default","TemplateStage":"Original"}) -> OK
+[09:37:08] Retrieved account ID 133375667645 from disk cache
+[09:37:08] Assuming role 'arn:aws:iam::133375667645:role/cdk-hnb659fds-deploy-role-133375667645-us-east-1'.
+[09:37:09] [SDK info] STS.AssumeRole({"RoleArn":"arn:aws:iam::133375667645:role/cdk-hnb659fds-deploy-role-133375667645-us-east-1","RoleSessionName":"aws-cdk-vaibhavsharma"}) -> OK
+[09:37:09] Retrieved account ID 133375667645 from disk cache
+[09:37:09] Assuming role 'arn:aws:iam::133375667645:role/cdk-hnb659fds-deploy-role-133375667645-us-east-1'.
+[09:37:11] [SDK info] STS.AssumeRole({"RoleArn":"arn:aws:iam::133375667645:role/cdk-hnb659fds-deploy-role-133375667645-us-east-1","RoleSessionName":"aws-cdk-vaibhavsharma"}) -> OK
+[09:37:11] start: Building AgentCore-InventoryAI-default Template
+[09:37:11] success: Built AgentCore-InventoryAI-default Template
+[09:37:11] Retrieved account ID 133375667645 from disk cache
+[09:37:12] [SDK info] CloudFormation.DescribeStacks({"StackName":"CDKToolkit"}) -> OK
+[09:37:12] start: Publishing AgentCore-InventoryAI-default Template (133375667645-us-east-1-4055bfed)
+[09:37:12] Retrieved account ID 133375667645 from disk cache
+[09:37:12] Assuming role 'arn:aws:iam::133375667645:role/cdk-hnb659fds-file-publishing-role-133375667645-us-east-1'.
+[09:37:13] [SDK info] STS.AssumeRole({"RoleArn":"arn:aws:iam::133375667645:role/cdk-hnb659fds-file-publishing-role-133375667645-us-east-1","RoleSessionName":"aws-cdk-vaibhavsharma"}) -> OK
+[09:37:13] check: Check s3://cdk-hnb659fds-assets-133375667645-us-east-1/2b53b6bed5db55592aa9fdf566f72d1c60dfac118437b73c9c2bae480cac50f2.json
+[09:37:16] [SDK info] S3.GetBucketLocation({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1"}) -> OK
+[09:37:17] [SDK info] S3.ListObjectsV2({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1","MaxKeys":1,"Prefix":"2b53b6bed5db55592aa9fdf566f72d1c60dfac118437b73c9c2bae480cac50f2.json"}) -> OK
+[09:37:17] [SDK info] S3.GetBucketEncryption({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1"}) -> OK
+[09:37:17] upload: Upload s3://cdk-hnb659fds-assets-133375667645-us-east-1/2b53b6bed5db55592aa9fdf566f72d1c60dfac118437b73c9c2bae480cac50f2.json
+[09:37:17] [SDK info] S3.PutObject({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1","Key":"2b53b6bed5db55592aa9fdf566f72d1c60dfac118437b73c9c2bae480cac50f2.json","Body":"<Buffer: 6.34 KiB>","ContentType":"application/json","ChecksumAlgorithm":"SHA256","ServerSideEncryption":"aws:kms","SSEKMSKeyId":"***SensitiveInformation***"}) -> OK
+[09:37:17] success: Published AgentCore-InventoryAI-default Template (133375667645-us-east-1-4055bfed)
+[09:37:18] [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:37:18] Retrieved account ID 133375667645 from disk cache
+[09:37:18] Hold on while we create a read-only change set to get a diff with accurate replacement information (use --method=template to use a less accurate but faster template-only diff)
+[09:37:18] Removing existing change set with name cdk-diff-change-set if it exists
+[09:37:19] [SDK info] CloudFormation.DeleteChangeSet({"ChangeSetName":"cdk-diff-change-set","StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:37:19] Attempting to create ChangeSet with name cdk-diff-change-set for stack AgentCore-InventoryAI-default
+[09:37:19] [SDK error] CloudFormation.CreateChangeSet({"StackName":"AgentCore-InventoryAI-default","ChangeSetName":"cdk-diff-change-set","TemplateURL":"https://s3.us-east-1.amazonaws.com/cdk-hnb659fds-assets-133375667645-us-east-1/2b53b6bed5db55592aa9fdf566f72d1c60dfac118437b73c9c2bae480cac50f2.json","Parameters":[],"Capabilities":["CAPABILITY_IAM","CAPABILITY_NAMED_IAM","CAPABILITY_AUTO_EXPAND"],"RoleARN":"arn:aws:iam::133375667645:role/cdk-hnb659fds-cfn-exec-role-133375667645-us-east-1","Tags":[{"Key":"agentcore:project-name","Value":"InventoryAI"},{"Key":"agentcore:target-name","Value":"default"}],"ClientToken":"diffaaf255ef-7bdc-4544-b82e-7c925dd5bee9","Description":"CDK Changeset for diff aaf255ef-7bdc-4544-b82e-7c925dd5bee9","ChangeSetType":"UPDATE"}) -> ValidationError: Stack:arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/bd1bb980-5400-11f1-b67c-121ad706ca3d is in ROLLBACK_COMPLETE state and can not be updated.
+[09:37:19] ValidationError: Stack:arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/bd1bb980-5400-11f1-b67c-121ad706ca3d is in ROLLBACK_COMPLETE state and can not be updated.
+[09:37:19] Could not create a change set, will base the diff on template differences (run again with -v to see the reason)
+
+────────────────────────────────────────────────────────────────────────────────
+Stack AgentCore-InventoryAI-default
+Resources
+[~] AWS::BedrockAgentCore::Runtime Application/AgentInventory/Runtime ApplicationAgentInventoryRuntime1A3FEE14
+ └─ [~] AgentRuntimeArtifact
+     └─ [~] .CodeConfiguration:
+         └─ [~] .Code:
+             └─ [~] .S3:
+                 └─ [~] .Prefix:
+                     ├─ [-] 3d727912aa0eb6989f19efca0955f4b374ec2f7a8f3428194c55582854346ce8.zip
+                     └─ [+] 2bada2d81aff8a09bb935f2092b61365d86fd296cccd30155be143aeb92cbb65.zip
+────────────────────────────────────────────────────────────────────────────────
+
+✨ Number of stacks with differences: 1
+[09:37:20] Status: SUCCESS
+[09:37:20] Duration: 17.0s
+
+[09:37:20] STEP: Publish assets
+[09:37:20] [trace] CDK_TOOLKIT_I1001: Starting Synthesis ...
+[09:37:20] [debug] CDK_ASSEMBLY_I0150: --app points to a cloud assembly, so we bypass synth
+[09:37:20] [info] CDK_TOOLKIT_I1000: ✨  Synthesis time: 0.01s
+[09:37:20] [debug] UNKNOWN: Checking for previously published assets
+[09:37:20] [debug] UNKNOWN: Retrieved account ID 133375667645 from disk cache
+[09:37:20] [debug] UNKNOWN: Assuming role 'arn:aws:iam::133375667645:role/cdk-hnb659fds-file-publishing-role-133375667645-us-east-1'.
+[09:37:20] [debug] UNKNOWN: Retrieved account ID 133375667645 from disk cache
+[09:37:20] [debug] UNKNOWN: Assuming role 'arn:aws:iam::133375667645:role/cdk-hnb659fds-file-publishing-role-133375667645-us-east-1'.
+[09:37:21] [trace] CDK_SDK_I0100: [SDK info] STS.AssumeRole({"RoleArn":"arn:aws:iam::133375667645:role/cdk-hnb659fds-file-publishing-role-133375667645-us-east-1","RoleSessionName":"aws-cdk-vaibhavsharma"}) -> OK
+[09:37:21] [debug] CDK_ASSETS_I5271: [1mAgentCore-InventoryAI-default[22m: check: Check s3://cdk-hnb659fds-assets-133375667645-us-east-1/2b53b6bed5db55592aa9fdf566f72d1c60dfac118437b73c9c2bae480cac50f2.json
+[09:37:21] [trace] CDK_SDK_I0100: [SDK info] STS.AssumeRole({"RoleArn":"arn:aws:iam::133375667645:role/cdk-hnb659fds-file-publishing-role-133375667645-us-east-1","RoleSessionName":"aws-cdk-vaibhavsharma"}) -> OK
+[09:37:21] [debug] CDK_ASSETS_I5271: [1mAgentCore-InventoryAI-default[22m: check: Check s3://cdk-hnb659fds-assets-133375667645-us-east-1/2bada2d81aff8a09bb935f2092b61365d86fd296cccd30155be143aeb92cbb65.zip
+[09:37:24] [trace] CDK_SDK_I0100: [SDK info] S3.ListObjectsV2({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1","MaxKeys":1,"Prefix":"2b53b6bed5db55592aa9fdf566f72d1c60dfac118437b73c9c2bae480cac50f2.json"}) -> OK
+[09:37:24] [debug] CDK_ASSETS_I5271: [1mAgentCore-InventoryAI-default[22m: found: Found s3://cdk-hnb659fds-assets-133375667645-us-east-1/2b53b6bed5db55592aa9fdf566f72d1c60dfac118437b73c9c2bae480cac50f2.json
+[09:37:24] [trace] CDK_SDK_I0100: [SDK info] S3.ListObjectsV2({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1","MaxKeys":1,"Prefix":"2bada2d81aff8a09bb935f2092b61365d86fd296cccd30155be143aeb92cbb65.zip"}) -> OK
+[09:37:24] [debug] UNKNOWN: 2 total assets, 1 still need to be published
+[09:37:24] [trace] CDK_TOOLKIT_I5210: Starting Build Asset ...
+[09:37:24] [debug] UNKNOWN: Retrieved account ID 133375667645 from disk cache
+[09:37:24] [debug] UNKNOWN: Assuming role 'arn:aws:iam::133375667645:role/cdk-hnb659fds-deploy-role-133375667645-us-east-1'.
+[09:37:25] [trace] CDK_SDK_I0100: [SDK info] STS.AssumeRole({"RoleArn":"arn:aws:iam::133375667645:role/cdk-hnb659fds-deploy-role-133375667645-us-east-1","RoleSessionName":"aws-cdk-vaibhavsharma"}) -> OK
+[09:37:26] [trace] CDK_SDK_I0100: [SDK info] SSM.GetParameter({"Name":"/cdk-bootstrap/hnb659fds/version","WithDecryption":true}) -> OK
+[09:37:26] [info] CDK_ASSETS_I5270: [1mAgentCore-InventoryAI-default[22m: start: Building Application/AgentInventory/CodeAsset/ZipAsset
+[09:37:26] [info] CDK_ASSETS_I5275: [1mAgentCore-InventoryAI-default[22m: success: Built Application/AgentInventory/CodeAsset/ZipAsset
+[09:37:26] [trace] CDK_TOOLKIT_I5211: ✨  Build Asset time: 2.48s
+[09:37:26] [trace] CDK_TOOLKIT_I5220: Starting Publish Asset ...
+[09:37:26] [debug] UNKNOWN: Retrieved account ID 133375667645 from disk cache
+[09:37:27] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"CDKToolkit"}) -> OK
+[09:37:27] [info] CDK_ASSETS_I5270: [1mAgentCore-InventoryAI-default[22m: start: Publishing Application/AgentInventory/CodeAsset/ZipAsset (133375667645-us-east-1-dd3fe822)
+[09:37:27] [debug] UNKNOWN: Retrieved account ID 133375667645 from disk cache
+[09:37:27] [debug] CDK_ASSETS_I5271: [1mAgentCore-InventoryAI-default[22m: check: Check s3://cdk-hnb659fds-assets-133375667645-us-east-1/2bada2d81aff8a09bb935f2092b61365d86fd296cccd30155be143aeb92cbb65.zip
+[09:37:30] [trace] CDK_SDK_I0100: [SDK info] S3.GetBucketLocation({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1"}) -> OK
+[09:37:30] [trace] CDK_SDK_I0100: [SDK info] S3.ListObjectsV2({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1","MaxKeys":1,"Prefix":"2bada2d81aff8a09bb935f2092b61365d86fd296cccd30155be143aeb92cbb65.zip"}) -> OK
+[09:37:31] [trace] CDK_SDK_I0100: [SDK info] S3.GetBucketEncryption({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1"}) -> OK
+[09:37:31] [debug] CDK_ASSETS_I5271: [1mAgentCore-InventoryAI-default[22m: upload: Upload s3://cdk-hnb659fds-assets-133375667645-us-east-1/2bada2d81aff8a09bb935f2092b61365d86fd296cccd30155be143aeb92cbb65.zip
+[09:37:31] [trace] CDK_SDK_I0100: [SDK info] S3.CreateMultipartUpload({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1","Key":"2bada2d81aff8a09bb935f2092b61365d86fd296cccd30155be143aeb92cbb65.zip","ContentType":"application/zip","ServerSideEncryption":"aws:kms","SSEKMSKeyId":"***SensitiveInformation***","ChecksumAlgorithm":"SHA256"}) -> OK
+[09:37:36] [trace] CDK_SDK_I0100: [SDK info] S3.UploadPart({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1","Key":"2bada2d81aff8a09bb935f2092b61365d86fd296cccd30155be143aeb92cbb65.zip","PartNumber":2,"UploadId":"eA2HtOwb1hkaTt9Mdd3n8jAMV4P32OaCbPPSFiuW5ILw53l88T1Wgz5TtlHs2n2mmDl5066tj9d_q9dAHav_aGmlWjg0JMZDlP5R9PCRZx6ZbQbMNn86pDfDdIV1kWMtPXyR0lV633ki07oNbQOYYA--","Body":"<Buffer: 3.5 MiB>","ChecksumAlgorithm":"SHA256"}) -> OK
+[09:37:37] [trace] CDK_SDK_I0100: [SDK info] S3.UploadPart({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1","Key":"2bada2d81aff8a09bb935f2092b61365d86fd296cccd30155be143aeb92cbb65.zip","PartNumber":1,"UploadId":"eA2HtOwb1hkaTt9Mdd3n8jAMV4P32OaCbPPSFiuW5ILw53l88T1Wgz5TtlHs2n2mmDl5066tj9d_q9dAHav_aGmlWjg0JMZDlP5R9PCRZx6ZbQbMNn86pDfDdIV1kWMtPXyR0lV633ki07oNbQOYYA--","Body":"<Buffer: 5 MiB>","ChecksumAlgorithm":"SHA256"}) -> OK
+[09:37:37] [trace] CDK_SDK_I0100: [SDK info] S3.CompleteMultipartUpload({"Bucket":"cdk-hnb659fds-assets-133375667645-us-east-1","Key":"2bada2d81aff8a09bb935f2092b61365d86fd296cccd30155be143aeb92cbb65.zip","UploadId":"eA2HtOwb1hkaTt9Mdd3n8jAMV4P32OaCbPPSFiuW5ILw53l88T1Wgz5TtlHs2n2mmDl5066tj9d_q9dAHav_aGmlWjg0JMZDlP5R9PCRZx6ZbQbMNn86pDfDdIV1kWMtPXyR0lV633ki07oNbQOYYA--","MultipartUpload":{"Parts":[{"PartNumber":1,"ETag":"\"0991eec3a2c19a1aa6b23a98b0507dc3\"","ChecksumSHA256":"4/dhIZ9uJg7LVVnPaSazN+PtBkbHs5O1A6roiHhJnXc="},{"PartNumber":2,"ETag":"\"8d96174d51737889a50e39f31794aaac\"","ChecksumSHA256":"sPBOp2xKLgL5q7iLLOA4TpBZipg/fATAYPu81iP5YJA="}]}}) -> OK
+[09:37:37] [info] CDK_ASSETS_I5275: [1mAgentCore-InventoryAI-default[22m: success: Published Application/AgentInventory/CodeAsset/ZipAsset (133375667645-us-east-1-dd3fe822)
+[09:37:37] [trace] CDK_TOOLKIT_I5221: ✨  Publish Asset time: 10.69s
+[09:37:37] [debug] UNKNOWN: Reading existing template for stack AgentCore-InventoryAI-default.
+[09:37:37] [debug] UNKNOWN: Retrieved account ID 133375667645 from disk cache
+[09:37:37] [debug] UNKNOWN: Assuming role 'arn:aws:iam::133375667645:role/cdk-hnb659fds-lookup-role-133375667645-us-east-1'.
+[09:37:38] [trace] CDK_SDK_I0100: [SDK info] STS.AssumeRole({"RoleArn":"arn:aws:iam::133375667645:role/cdk-hnb659fds-lookup-role-133375667645-us-east-1","RoleSessionName":"aws-cdk-vaibhavsharma"}) -> OK
+[09:37:39] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:37:40] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.GetTemplate({"StackName":"AgentCore-InventoryAI-default","TemplateStage":"Original"}) -> OK
+[09:37:40] [info] CDK_TOOLKIT_I5100: [1mAgentCore-InventoryAI-default[22m: deploying... [1/1]
+[09:37:40] [debug] UNKNOWN: Retrieved account ID 133375667645 from disk cache
+[09:37:40] [debug] UNKNOWN: Assuming role 'arn:aws:iam::133375667645:role/cdk-hnb659fds-deploy-role-133375667645-us-east-1'.
+[09:37:41] [trace] CDK_SDK_I0100: [SDK info] STS.AssumeRole({"RoleArn":"arn:aws:iam::133375667645:role/cdk-hnb659fds-deploy-role-133375667645-us-east-1","RoleSessionName":"aws-cdk-vaibhavsharma"}) -> OK
+[09:37:41] [debug] UNKNOWN: Retrieved account ID 133375667645 from disk cache
+[09:37:42] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:37:42] [debug] UNKNOWN: Found existing stack AgentCore-InventoryAI-default that had previously failed creation. Deleting it before attempting to re-create it.
+[09:37:42] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DeleteStack({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/bd1bb980-5400-11f1-b67c-121ad706ca3d","ClientRequestToken":"791c7250-3007-4d97-8578-bc8683b7aa60"}) -> OK
+[09:37:42] [debug] UNKNOWN: Waiting for stack AgentCore-InventoryAI-default to finish creating or updating...
+[09:37:43] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/bd1bb980-5400-11f1-b67c-121ad706ca3d"}) -> OK
+[09:37:43] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has an ongoing operation in progress and is not stable (DELETE_IN_PROGRESS (User Initiated))
+[09:37:48] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/bd1bb980-5400-11f1-b67c-121ad706ca3d"}) -> OK
+[09:37:48] [debug] UNKNOWN: AgentCore-InventoryAI-default: checking if we can skip deploy
+[09:37:48] [debug] UNKNOWN: AgentCore-InventoryAI-default: no existing stack
+[09:37:48] [debug] UNKNOWN: AgentCore-InventoryAI-default: deploying...
+[09:37:48] [debug] UNKNOWN: Waiting for stack CDKToolkit to finish creating or updating...
+[09:37:49] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"CDKToolkit"}) -> OK
+[09:37:50] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"CDKToolkit"}) -> OK
+[09:37:50] [debug] UNKNOWN: Attempting to create ChangeSet with name cdk-deploy-change-set to create stack AgentCore-InventoryAI-default
+[09:37:50] [info] UNKNOWN: [1mAgentCore-InventoryAI-default[22m: creating CloudFormation changeset...
+[09:37:52] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.CreateChangeSet({"StackName":"AgentCore-InventoryAI-default","ChangeSetName":"cdk-deploy-change-set","TemplateURL":"https://s3.us-east-1.amazonaws.com/cdk-hnb659fds-assets-133375667645-us-east-1/2b53b6bed5db55592aa9fdf566f72d1c60dfac118437b73c9c2bae480cac50f2.json","Parameters":[],"Capabilities":["CAPABILITY_IAM","CAPABILITY_NAMED_IAM","CAPABILITY_AUTO_EXPAND"],"RoleARN":"arn:aws:iam::133375667645:role/cdk-hnb659fds-cfn-exec-role-133375667645-us-east-1","Tags":[{"Key":"agentcore:project-name","Value":"InventoryAI"},{"Key":"agentcore:target-name","Value":"default"}],"ClientToken":"create30801c29-edf2-401b-baaf-05e07fd35d4f","Description":"CDK Changeset for execution 30801c29-edf2-401b-baaf-05e07fd35d4f","ChangeSetType":"CREATE","ImportExistingResources":false}) -> OK
+[09:37:52] [debug] UNKNOWN: Initiated creation of changeset: arn:aws:cloudformation:us-east-1:133375667645:changeSet/cdk-deploy-change-set/ba3c3218-8bd6-46d4-83c7-bc24cf8917b1; waiting for it to finish creating...
+[09:37:52] [debug] UNKNOWN: Waiting for changeset cdk-deploy-change-set on stack AgentCore-InventoryAI-default to finish creating...
+[09:37:52] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeChangeSet({"ChangeSetName":"arn:aws:cloudformation:us-east-1:133375667645:changeSet/cdk-deploy-change-set/ba3c3218-8bd6-46d4-83c7-bc24cf8917b1","StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:37:52] [debug] UNKNOWN: Changeset cdk-deploy-change-set on stack AgentCore-InventoryAI-default is still creating
+[09:37:58] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeChangeSet({"ChangeSetName":"arn:aws:cloudformation:us-east-1:133375667645:changeSet/cdk-deploy-change-set/ba3c3218-8bd6-46d4-83c7-bc24cf8917b1","StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:37:58] [debug] UNKNOWN: Initiating execution of changeset arn:aws:cloudformation:us-east-1:133375667645:changeSet/cdk-deploy-change-set/ba3c3218-8bd6-46d4-83c7-bc24cf8917b1 on stack AgentCore-InventoryAI-default
+[09:37:58] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.ExecuteChangeSet({"ChangeSetName":"arn:aws:cloudformation:us-east-1:133375667645:changeSet/cdk-deploy-change-set/ba3c3218-8bd6-46d4-83c7-bc24cf8917b1","StackName":"AgentCore-InventoryAI-default","ClientRequestToken":"exec30801c29-edf2-401b-baaf-05e07fd35d4f"}) -> OK
+[09:37:58] [debug] UNKNOWN: Execution of changeset arn:aws:cloudformation:us-east-1:133375667645:changeSet/cdk-deploy-change-set/ba3c3218-8bd6-46d4-83c7-bc24cf8917b1 on stack AgentCore-InventoryAI-default has started; waiting for the update to complete...
+[09:37:58] [info] CDK_TOOLKIT_I5501: Deploying AgentCore-InventoryAI-default
+[09:37:58] [debug] UNKNOWN: Waiting for stack AgentCore-InventoryAI-default to finish creating or updating...
+[09:37:58] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:37:58] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has an ongoing operation in progress and is not stable (CREATE_IN_PROGRESS (User Initiated))
+[09:38:00] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:00] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 0/5 | 9:37:52 AM | REVIEW_IN_PROGRESS | AWS::CloudFormation::Stack | AgentCore-InventoryAI-default User Initiated
+[09:38:00] Status: SUCCESS
+[09:38:00] Duration: 40.6s
+
+[09:38:00] STEP: Deploy to AWS
+[09:38:00] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 0/5 | 9:37:58 AM | CREATE_IN_PROGRESS | AWS::CloudFormation::Stack | AgentCore-InventoryAI-default User Initiated
+[09:38:00] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 0/5 | 9:38:00 AM | CREATE_IN_PROGRESS | AWS::IAM::Role | Application/AgentInventory/Runtime/ExecutionRole (ApplicationAgentInventoryRuntimeExecutionRoleD2B4F074)
+[09:38:00] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 0/5 | 9:38:00 AM | CREATE_IN_PROGRESS | AWS::CDK::Metadata | CDKMetadata/Default (CDKMetadata)
+[09:38:03] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:03] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 0/5 | 9:38:01 AM | CREATE_IN_PROGRESS | AWS::IAM::Role | Application/AgentInventory/Runtime/ExecutionRole (ApplicationAgentInventoryRuntimeExecutionRoleD2B4F074) Resource creation Initiated
+[09:38:03] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 0/5 | 9:38:01 AM | CREATE_IN_PROGRESS | AWS::CDK::Metadata | CDKMetadata/Default (CDKMetadata) Resource creation Initiated
+[09:38:03] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 1/5 | 9:38:01 AM | CREATE_COMPLETE | AWS::CDK::Metadata | CDKMetadata/Default (CDKMetadata)
+[09:38:04] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:38:04] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has an ongoing operation in progress and is not stable (CREATE_IN_PROGRESS)
+[09:38:05] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:07] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:09] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:38:09] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has an ongoing operation in progress and is not stable (CREATE_IN_PROGRESS)
+[09:38:10] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:12] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:14] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:15] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:38:15] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has an ongoing operation in progress and is not stable (CREATE_IN_PROGRESS)
+[09:38:17] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:20] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:20] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 2/5 | 9:38:17 AM | CREATE_COMPLETE | AWS::IAM::Role | Application/AgentInventory/Runtime/ExecutionRole (ApplicationAgentInventoryRuntimeExecutionRoleD2B4F074)
+[09:38:20] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 2/5 | 9:38:18 AM | CREATE_IN_PROGRESS | AWS::IAM::Policy | Application/AgentInventory/Runtime/ExecutionRole/DefaultPolicy (ApplicationAgentInventoryRuntimeExecutionRoleDefaultPolicy2B632F2C)
+[09:38:20] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 2/5 | 9:38:19 AM | CREATE_IN_PROGRESS | AWS::IAM::Policy | Application/AgentInventory/Runtime/ExecutionRole/DefaultPolicy (ApplicationAgentInventoryRuntimeExecutionRoleDefaultPolicy2B632F2C) Resource creation Initiated
+[09:38:21] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:38:21] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has an ongoing operation in progress and is not stable (CREATE_IN_PROGRESS)
+[09:38:23] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:25] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:26] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:38:26] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has an ongoing operation in progress and is not stable (CREATE_IN_PROGRESS)
+[09:38:28] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:30] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:31] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:38:31] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has an ongoing operation in progress and is not stable (CREATE_IN_PROGRESS)
+[09:38:33] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:36] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:36] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 3/5 | 9:38:34 AM | CREATE_COMPLETE | AWS::IAM::Policy | Application/AgentInventory/Runtime/ExecutionRole/DefaultPolicy (ApplicationAgentInventoryRuntimeExecutionRoleDefaultPolicy2B632F2C)
+[09:38:36] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 3/5 | 9:38:35 AM | CREATE_IN_PROGRESS | AWS::BedrockAgentCore::Runtime | Application/AgentInventory/Runtime (ApplicationAgentInventoryRuntime1A3FEE14)
+[09:38:36] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:38:36] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has an ongoing operation in progress and is not stable (CREATE_IN_PROGRESS)
+[09:38:38] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:38] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 3/5 | 9:38:37 AM | CREATE_IN_PROGRESS | AWS::BedrockAgentCore::Runtime | Application/AgentInventory/Runtime (ApplicationAgentInventoryRuntime1A3FEE14) Resource creation Initiated
+[09:38:38] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 3/5 | 9:38:38 AM | CREATE_IN_PROGRESS | AWS::BedrockAgentCore::Runtime | Application/AgentInventory/Runtime (ApplicationAgentInventoryRuntime1A3FEE14) Eventual consistency check initiated
+[09:38:38] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 3/5 | 9:38:38 AM | CREATE_IN_PROGRESS | AWS::CloudFormation::Stack | AgentCore-InventoryAI-default Eventual consistency check initiated
+[09:38:41] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:42] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:38:42] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has an ongoing operation in progress and is not stable (CREATE_IN_PROGRESS)
+[09:38:44] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:47] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:48] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:38:48] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has an ongoing operation in progress and is not stable (CREATE_IN_PROGRESS)
+[09:38:50] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:50] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 4/5 | 9:38:49 AM | CREATE_COMPLETE | AWS::BedrockAgentCore::Runtime | Application/AgentInventory/Runtime (ApplicationAgentInventoryRuntime1A3FEE14)
+[09:38:52] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:52] [info] CDK_TOOLKIT_I5502: AgentCore-InventoryAI-default | 5/5 | 9:38:51 AM | CREATE_COMPLETE | AWS::CloudFormation::Stack | AgentCore-InventoryAI-default
+[09:38:53] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStacks({"StackName":"AgentCore-InventoryAI-default"}) -> OK
+[09:38:54] [trace] CDK_SDK_I0100: [SDK info] CloudFormation.DescribeStackEvents({"StackName":"arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b"}) -> OK
+[09:38:54] [info] CDK_TOOLKIT_I5503: Completed AgentCore-InventoryAI-default
+[09:38:54] [debug] UNKNOWN: Stack AgentCore-InventoryAI-default has completed updating
+[09:38:54] [result] CDK_TOOLKIT_I5900: [32m[39m
+[32m ✅  AgentCore-InventoryAI-default[39m
+[09:38:54] [info] CDK_TOOLKIT_I5000: ✨  Deployment time: 74.46s
+[09:38:54] [info] CDK_TOOLKIT_I5901: Outputs:
+[36mAgentCore-InventoryAI-default[39m.[36mApplicationAgentInventoryRoleArnOutput6F8089F2[39m = [4m[36marn:aws:iam::133375667645:role/AgentCore-InventoryAI-def-ApplicationAgentInventory-c1iVZvPTDj68[39m[24m
+[36mAgentCore-InventoryAI-default[39m.[36mApplicationAgentInventoryRuntimeArnOutput246C6AD1[39m = [4m[36marn:aws:bedrock-agentcore:us-east-1:133375667645:runtime/InventoryAI_Inventory-5jSQAE53DM[39m[24m
+[36mAgentCore-InventoryAI-default[39m.[36mApplicationAgentInventoryRuntimeIdOutput44629250[39m = [4m[36mInventoryAI_Inventory-5jSQAE53DM[39m[24m
+[36mAgentCore-InventoryAI-default[39m.[36mStackNameOutput[39m = [4m[36mAgentCore-InventoryAI-default[39m[24m
+[09:38:54] [info] CDK_TOOLKIT_I5901: Stack ARN:
+arn:aws:cloudformation:us-east-1:133375667645:stack/AgentCore-InventoryAI-default/7898db20-5401-11f1-bf70-0afff4b3916b
+[09:38:54] [info] CDK_TOOLKIT_I5001: ✨  Total time: 74.48s
+[09:38:54] Polling stack outputs (attempt 1/10)...
+[09:38:55] Retrieved 4 output(s) from stack
+[09:39:02] Status: SUCCESS
+[09:39:02] Duration: 1m 2s
+
+================================================================================
+COMPLETED SUCCESSFULLY
+Total Duration: 2m 24s
+================================================================================
